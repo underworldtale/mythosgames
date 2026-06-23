@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mythos Games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a class="nav-logo" href="#">Mythos Games</a>
+    <ul class="nav-links">
+      <li><a href="#juegos">Juegos</a></li>
+      <li><a href="#devlog">Devlog</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()">☰</button>
+  </nav>
+
+  <div class="nav-mobile" id="navMobile">
+    <a href="#juegos"    onclick="toggleMenu()">Juegos</a>
+    <a href="#devlog"    onclick="toggleMenu()">Devlog</a>
+    <a href="#nosotros"  onclick="toggleMenu()">Nosotros</a>
+    <a href="#contacto"  onclick="toggleMenu()">Contacto</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio" style="background-image:url('./images/fondoinicio.png');">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-tagline">Estudio independiente de videojuegos</p>
+      <h1 class="hero-titulo">Mythos Games</h1>
+      <p class="hero-subtitulo">Historias que trascienden el tiempo. Mundos forjados en mito y sombra.</p>
+      <a href="#juegos" class="btn-hero">Descubrir juegos</a>
+    </div>
+    <div class="hero-scroll">↓</div>
+  </section>
+
+  <!-- JUEGOS -->
+  <section class="seccion" id="juegos">
+    <div class="seccion-inner">
+      <p class="seccion-eyebrow">Nuestros juegos</p>
+      <h2 class="seccion-titulo">Universos que explorar</h2>
+      <div class="juegos-grid">
+
+        <div class="juego-card">
+          <div class="juego-imagen" style="background-image: url('./images/juego1.png');">
+            <div class="juego-overlay"></div>
+            <span class="juego-badge">En desarrollo</span>
+          </div>
+          <div class="juego-info">
+            <h3 class="juego-nombre">UnderWorld Tale</h3>
+            <p class="juego-genero">Novela visual · Romance · Mitología griega</p>
+            <p class="juego-desc">Desciende al Inframundo como Melinoë y escribe tu destino entre dioses, sombras y amores prohibidos.</p>
+            <button class="btn-juego" onclick="abrirModal()">Saber más</button>
+          </div>
+        </div>
+
+        <div class="juego-card proximamente">
+          <div class="juego-imagen placeholder">
+            <div class="juego-overlay"></div>
+            <span class="juego-badge pronto">Próximamente</span>
+          </div>
+          <div class="juego-info">
+            <h3 class="juego-nombre">??? </h3>
+            <p class="juego-genero">Por anunciar</p>
+            <p class="juego-desc">Algo nuevo se está gestando en las sombras. Pronto sabrás más.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section class="seccion seccion-dark" id="nosotros">
+    <div class="seccion-inner seccion-nosotros">
+      <div class="nosotros-texto">
+        <p class="seccion-eyebrow">Quiénes somos</p>
+        <h2 class="seccion-titulo">Mythos Games</h2>
+        <p class="nosotros-p">Somos un estudio independiente apasionado por las historias que mezclan mitología, romance y decisiones con peso real.</p>
+        <p class="nosotros-p">Creamos novelas visuales y juegos narrativos donde cada elección importa y cada personaje tiene alma propia.</p>
+        <p class="nosotros-p">Nuestro objetivo es llevar mundos llenos de magia, dioses y emociones directamente a tus manos.</p>
+      </div>
+      <div class="nosotros-valores">
+        <div class="valor">
+          <span class="valor-icono">✦</span>
+          <h4 class="valor-titulo">Narrativa</h4>
+          <p class="valor-desc">Historias profundas con personajes que te marcan.</p>
+        </div>
+        <div class="valor">
+          <span class="valor-icono">✦</span>
+          <h4 class="valor-titulo">Mitología</h4>
+          <p class="valor-desc">Universos inspirados en mitos antiguos reimaginados.</p>
+        </div>
+        <div class="valor">
+          <span class="valor-icono">✦</span>
+          <h4 class="valor-titulo">Elección</h4>
+          <p class="valor-desc">Decisiones que moldean el destino de tu historia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAILER -->
+  <section class="seccion seccion-trailer" id="trailer">
+    <div class="seccion-inner" style="text-align:center;">
+      <p class="seccion-eyebrow">En desarrollo</p>
+      <h2 class="seccion-titulo">Trailer</h2>
+      <div class="trailer-wrapper">
+        <div class="trailer-placeholder">
+          <span class="trailer-icono">▶</span>
+          <p class="trailer-texto">Trailer próximamente</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEVLOG -->
+  <section class="seccion" id="devlog">
+    <div class="seccion-inner">
+      <p class="seccion-eyebrow">Desarrollo</p>
+      <h2 class="seccion-titulo">Devlog</h2>
+      <div class="devlog-grid">
+
+        <article class="devlog-card">
+          <p class="devlog-fecha">Mayo 2026</p>
+          <h3 class="devlog-titulo">El capítulo 1 ya está aquí</h3>
+          <p class="devlog-desc">Después de meses de trabajo, el primer capítulo de UnderWorld Tale está disponible. Más de 30 escenas, 5 personajes jugables y el inicio de una historia que no olvidarás.</p>
+          <span class="devlog-tag">UnderWorld Tale</span>
+        </article>
+
+        <article class="devlog-card">
+          <p class="devlog-fecha">Abril 2026</p>
+          <h3 class="devlog-titulo">Diseño de personajes: los crush</h3>
+          <p class="devlog-desc">Os presentamos a Hermes, Deimos y Pasha — los tres intereses románticos principales del juego. Cada uno con su personalidad, su historia y sus secretos.</p>
+          <span class="devlog-tag">Arte</span>
+        </article>
+
+        <article class="devlog-card">
+          <p class="devlog-fecha">Marzo 2026</p>
+          <h3 class="devlog-titulo">Nace Mythos Games</h3>
+          <p class="devlog-desc">Todo empieza con una idea: crear historias que mezclen mitología, romance y decisiones reales. Hoy damos el primer paso con el anuncio de nuestro primer proyecto.</p>
+          <span class="devlog-tag">Estudio</span>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="seccion seccion-dark" id="newsletter">
+    <div class="seccion-inner seccion-contacto">
+      <p class="seccion-eyebrow">Mantente al día</p>
+      <h2 class="seccion-titulo">Newsletter</h2>
+      <p class="contacto-sub">Suscríbete para recibir novedades, actualizaciones y contenido exclusivo directamente en tu correo.</p>
+      <form class="newsletter-form" id="newsletterForm" novalidate>
+        <div class="newsletter-fila">
+          <input class="form-campo" type="email" name="email" placeholder="Tu email" required>
+          <button type="submit" class="btn-newsletter">Suscribirme</button>
+        </div>
+        <p class="form-feedback ok"  id="nl-ok"></p>
+        <p class="form-feedback err" id="nl-err"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="seccion" id="contacto">
+    <div class="seccion-inner seccion-contacto">
+      <p class="seccion-eyebrow">Escríbenos</p>
+      <h2 class="seccion-titulo">Contacto</h2>
+      <p class="contacto-sub">¿Tienes alguna pregunta, propuesta o simplemente quieres saludar? Escríbenos.</p>
+      <form class="contacto-form" id="contactForm" novalidate>
+        <div class="form-fila">
+          <input class="form-campo" type="text"  name="nombre"  placeholder="Tu nombre"  required>
+          <input class="form-campo" type="email" name="email"   placeholder="Tu email"   required>
+        </div>
+        <textarea class="form-campo" name="mensaje" placeholder="Tu mensaje..." rows="5" required></textarea>
+        <button type="submit" class="btn-enviar">Enviar mensaje</button>
+        <p class="form-feedback ok"  id="form-ok"></p>
+        <p class="form-feedback err" id="form-err"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer-logo">Mythos Games</p>
+    <div class="footer-redes">
+      <a href="#" class="footer-red" aria-label="Instagram" title="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="#" class="footer-red" aria-label="TikTok" title="TikTok">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.17 8.17 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+      </a>
+      <a href="#" class="footer-red" aria-label="Twitter / X" title="Twitter / X">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+    </div>
+    <p class="footer-copy">© 2026 Mythos Games · Todos los derechos reservados</p>
+  </footer>
+
+  <!-- MODAL UNDERWORLD TALE -->
+  <div class="modal-overlay" id="modalUWT" onclick="cerrarModal(event)">
+    <div class="modal-caja">
+      <button class="modal-cerrar" onclick="cerrarModalBtn()">✕</button>
+
+      <div class="modal-header">
+        <p class="modal-eyebrow">Novela visual</p>
+        <h2 class="modal-titulo">UnderWorld Tale</h2>
+        <p class="modal-genero">Romance · Mitología griega · Decisiones narrativas</p>
+      </div>
+
+      <div class="modal-sinopsis">
+        <p>Desciende al Inframundo como <strong>Melinoë</strong>, hija de Hades y Perséfone, mensajera de los sueños y las sombras. Lleva un siglo manteniendo en secreto su relación con Thanatos, dios de la muerte, hasta que una tarde junto al río Estigia lo cambia todo.</p>
+        <p>Una boda inesperada. Un amor que se rompe sin explicación. Y un pacto antiguo entre el Olimpo y los dioses egipcios que quizás tenga más que ver con su destino de lo que jamás imaginó.</p>
+        <p>Cada elección que tomes marcará el rumbo de la historia, tus relaciones con los personajes y el final que mereces.</p>
+      </div>
+
+      <div class="modal-personajes-seccion">
+        <h3 class="modal-subtitulo">Personajes</h3>
+        <div class="modal-personajes-grid">
+
+          <div class="modal-pj-trio">
+            <img src="./images/Crushes.png" alt="Deimos, Hermes y Pasha" class="modal-trio-img">
+            <div class="modal-trio-nombres">
+              <span>Deimos</span>
+              <span>Hermes</span>
+              <span>Pasha</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="modal-jugar">
+        <a href="../underworldtale1/docs/index.html" class="btn-modal-jugar">Jugar ahora</a>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
